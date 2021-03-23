@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8">
     <title>Admin pannel</title>
-    <link rel="stylesheet" href="CSS/Style1.css">
+    <link rel="stylesheet" href="CSS/DashBoard.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>

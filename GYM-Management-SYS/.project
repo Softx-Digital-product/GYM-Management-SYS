@@ -26,4 +26,11 @@
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>apache-tomcat-9.0.40-windows-x64</name>
+			<type>2</type>
+			<location>C:/Users/swapn/Downloads/apache-tomcat-9.0.40-windows-x64</location>
+		</link>
+	</linkedResources>
 </projectDescription>

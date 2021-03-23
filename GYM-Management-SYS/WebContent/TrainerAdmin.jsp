@@ -12,7 +12,7 @@
 <meta charset="ISO-8859-1">
 <title>TrainerAdmin</title>
 
-<link rel="stylesheet" href="CSS/Style1.css">
+<link rel="stylesheet" href="CSS/Dashboard.css">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
