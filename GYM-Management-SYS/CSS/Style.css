@@ -1,0 +1,31 @@
+@charset "ISO-8859-1";
+body{
+    margin: 0;
+    padding: 0;
+
+box-sizing: border-box;
+}   
+#home{
+    height: 600px;
+
+}
+
+#Gallary{
+    height: 600px;
+
+}
+
+#Subscription{
+    height: 600px;
+
+}
+
+#Blog{
+    height: 600px;
+
+}
+
+#ContactUs{
+    height: 700px;
+
+}
