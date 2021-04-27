@@ -1,0 +1,82 @@
+package UserData;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import MailPkg.PrepareMail;
+
+/**
+ * Servlet implementation class UserRegisterData
+ */
+@WebServlet("/UserRegisterData")
+public class UserRegisterData extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public UserRegisterData() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String fNameString = request.getParameter("Fname");
+		String lnameString = request.getParameter("Lname");
+		String emailString = request.getParameter("Email");
+		String Pass = request.getParameter("Pass");
+		String cityString = request.getParameter("city");
+		String genderString = request.getParameter("Gender");
+		PrintWriter printWriter = response.getWriter();
+		GenrateOTP otp = new GenrateOTP();
+		String otpString =otp.genrateotp(6);
+		printWriter.println("FName = "+fNameString);
+		printWriter.println("Otp = "+otpString);
+		
+		
+		PrepareMail mail = new PrepareMail();
+		try {
+			mail.sendMail(emailString, otpString);
+			HttpSession session = request.getSession();
+			session.setAttribute("EmailID", emailString);
+			session.setAttribute("otp", otpString);
+			session.setAttribute("fname", fNameString);
+			session.setAttribute("lname", lnameString);
+			session.setAttribute("Pass", Pass);
+			session.setAttribute("City", cityString);
+			session.setAttribute("gender", genderString);
+			
+			response.sendRedirect("ConfirmOTP.jsp");
+			
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+	}
+
+}
