@@ -1,18 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ include file ="SideBar.jsp"
-     %>
+    <%@ include file ="SideBar.jsp" %>
     <%@ taglib prefix ="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
     <%@ taglib prefix ="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <%@ taglib prefix ="fun" uri="http://java.sun.com/jsp/jstl/functions" %>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>TrainerAdmin</title>
 
-<link rel="stylesheet" href="CSS/Dashboard.css">
+<link rel="stylesheet" href="CSS/Style1.css">
+<link rel="stylesheet" href="CSS/Style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
@@ -99,6 +100,7 @@ select* from adgymtrainer
 
     </form>
     </form>
+    
 
 
 </body>
